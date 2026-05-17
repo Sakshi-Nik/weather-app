@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Weather App 🌦️</h1>
+
+    <div class="topbar">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />   
+        <button onclick="searchCity()">Search</button>            
+        <button onclick="getLocation()">📍 Locate</button>
+    </div>
+
+    <div class="toolbar">
+        <div class="unit-toggle">
+            <button id="btnC" class="active" onclick="setUnit('C')">°C</button>  
+            <button id="btnF" onclick="setUnit('F')">°F</button>
+        </div>
+        <div id="historyChips" class="history-chips"></div>
+    </div>
+
+    <div id="favSection" class="favs-section" style="display:none;">
+        <div class="section-label">⭐ Favourites</div>
+        <div id="favChips" class="fav-chips"></div>
+    </div>
+
+    <div id="weatherResult"></div>
+
+    <div id="forecastSection" style="display:none;">
+        <div class="section-label">📅 5-Day Forecast</div>
+        <div id="forecastGrid" class="forecast-grid"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
